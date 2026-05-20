@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Expiry Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1> Food Expiry Tracker</h1>
+
+        <div class="form-container">
+            <input type="text" id="foodName" placeholder="Enter food item">
+            <input type="date" id="expiryDate">
+            <select id="category">
+                <option value="Dairy">Dairy</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Drinks">Drinks</option>
+            </select>
+
+            <button onclick="addFoodItem()">Add Item</button>
+        </div>
+
+        <div class="stats">
+            <div class="card">
+                <h2 id="totalItems">0</h2>
+                <p>Total Items</p>
+            </div>
+
+            <div class="card warning-card">
+                <h2 id="expiringSoon">0</h2>
+                <p>Expiring Soon</p>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search food items..." onkeyup="searchFood()">
+        </div>
+
+        <div id="foodList" class="food-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

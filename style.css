@@ -1,0 +1,54 @@
+* {
+}
+
+.food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.food-item {
+    padding: 18px;
+    border-radius: 12px;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.food-details h3 {
+    margin-bottom: 5px;
+}
+
+.expired {
+    border-left: 8px solid red;
+}
+
+.expiring {
+    border-left: 8px solid orange;
+}
+
+.safe {
+    border-left: 8px solid green;
+}
+
+.delete-btn {
+    background: crimson;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+@media(max-width: 600px) {
+    .stats {
+        flex-direction: column;
+    }
+
+    .food-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
